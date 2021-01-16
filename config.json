@@ -1,0 +1,31 @@
+{
+  "Coinbase": {
+    "websocket_url": "wss://ws-feed.pro.coinbase.com",
+    "websocket_init_data": {
+      "type": "subscribe",
+      "product_ids": ["BTC-EUR", "LTC-EUR"],
+      "channels": ["ticker"]
+    },
+    "websocket_filter_str": "ticker"
+  },
+  "Kraken": {
+    "websocket_url": "wss://ws.kraken.com",
+    "websocket_init_data": {
+      "event": "subscribe",
+      "pair": ["LTC/EUR", "BTC/EUR"],
+      "subscription": {
+        "name": "ticker"
+      }
+    },
+    "websocket_filter_str": "ticker"
+  },
+  "Binance": {
+    "websocket_url": "wss://stream.binance.com:9443/ws/!ticker@arr",
+    "websocket_init_data":  {
+      "method": "SUBSCRIBE",
+      "params": ["!ticker@arr"],
+      "id": 1
+    },
+    "websocket_filter_str": "24hrTicker"
+  }
+}
